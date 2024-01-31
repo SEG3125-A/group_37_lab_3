@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WalWholeGrains</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>WalWholeGrains</h1>
+    </header>
+
+    <div id="sideMenu" class="side-menu">
+        <a href="#" onclick="showCustomerPage()">Customer Page</a>
+        <a href="#" onclick="showProductsPage()">Products Page</a>
+        <a href="#" onclick="showCartPage()">Cart</a>
+    </div>
+
+    <div id="mainContent">
+        <div id="customerPage" class="page">
+            <h2>Customer Page</h2>
+            <label for="vegetarian">Are you vegetarian?</label>
+            <input type="checkbox" id="vegetarian">
+            <br>
+            <label for="glutenAllergy">Do you have a gluten allergy?</label>
+            <input type="checkbox" id="glutenAllergy">
+            <br>
+            <label for="organicPreference">Organic Preference:</label>
+            <select id="organicPreference" onchange="renderProducts()">
+                <option value="all">All</option>
+                <option value="organic">Organic</option>
+                <option value="nonOrganic">Non-Organic</option>
+            </select>
+        </div>
+
+        <div id="productsPage" class="page">
+            <h2>Products Page</h2>
+            <label for="categoryFilter">Category:</label>
+            <select id="categoryFilter" onchange="renderProducts()">
+                <option value="all">All</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Meats">Meats</option>
+                <option value="Grains">Grains</option>
+                <option value="Processed Foods">Processed Foods</option>
+            </select>
+            <div id="productList"></div>
+        </div>
+
+        <div id="cartPage" class="page">
+            <h2>Cart</h2>
+            <div id="cartItems"></div>
+            <div id="total"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Website designed by Group 37</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
