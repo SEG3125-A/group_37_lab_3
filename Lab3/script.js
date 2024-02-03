@@ -76,14 +76,14 @@ function renderProducts() {
         const productsDiv = document.createElement('div');
         productsDiv.classList.add('products');
 
-        filteredProducts.filter(product => product.category === category).forEach(product => {
+        filteredProducts.filter(product => product.category === category).forEach((product, index) => {
             const div = document.createElement('div');
             div.classList.add('product');
             div.innerHTML = `
                 <img src="${product.imageUrl}" alt="Image of ${product.name}">
                 <p>${product.name}</p>
                 <p>$${product.price.toFixed(2)}</p>
-                <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+                <button onclick="addToCart('${product.name}', ${product.price}, ${index})">Add to Cart</button>
             `;
             productsDiv.appendChild(div);
         });
@@ -96,8 +96,8 @@ function renderProducts() {
 // Cart Functionality
 let cart = [];
 
-function addToCart(name, price) {
-    cart.push({ name, price });
+function addToCart(name, price, index) {
+    cart.push({ name, price, index });
     displayCart();
 }
 
@@ -106,12 +106,26 @@ function displayCart() {
     let totalPrice = 0;
     cart.forEach(item => {
         const div = document.createElement('div');
-        div.innerHTML = `${item.name} - $${item.price.toFixed(2)}`;
+        div.innerHTML = `${item.name} - $${item.price.toFixed(2)} <button onclick="removeFromCart(${item.index})">Remove</button>`;
         cartItems.appendChild(div);
         totalPrice += item.price;
     });
     total.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
 }
+function removeFromCart(index) {
+    if (cart.length === 1) {
+        cart = [];
+    } else {
+        cart.splice(index, 1);
+    }
+    displayCart();
+}
+function clearCart() {
+    cart = [];
+    displayCart();
+}
+
+
 
 // Show the Customer Page by default
 showCustomerPage();
