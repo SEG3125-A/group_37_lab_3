@@ -1,4 +1,12 @@
 /* Add CSS code here */
+
+.logo {
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 200px; /* Set maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
 body {
   margin: 0; /* Remove default body margin */
   border: 20px solid gray; /* Add a 20px grey border around the entire page */
