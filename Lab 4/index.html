@@ -15,7 +15,6 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
 <!-- Carousel Section -->
 <div id="imageCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
     <ol class="carousel-indicators">
@@ -26,69 +25,24 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://images.ctfassets.net/g8qtv9gzg47d/54l2CVQdSFdJHhw9sBtKs8/38c1da5ee3ef4a7c85e94153ddcaa176/IMG_0007.jpg" class="d-block mx-auto w-50" style="max-height: 700px;" alt="Image 1">
+            <img src="https://images.ctfassets.net/g8qtv9gzg47d/54l2CVQdSFdJHhw9sBtKs8/38c1da5ee3ef4a7c85e94153ddcaa176/IMG_0007.jpg" class="d-block mx-auto w-50" alt="Image 1">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Welcome to Jao Barbershop</h1>
                 <p>We'll take care of your hair!</p>
-                <!-- Add buttons here -->
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Service</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Calendar</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Payment</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Where to find us</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://i2.wp.com/www.hadviser.com/wp-content/uploads/2020/01/18-chocolate-hairstyle-with-caramel-balayage-B5ZYpXiB_o_.jpg" class="d-block mx-auto w-50" style="max-height: 700px;" alt="Image 2">
+            <img src="https://i2.wp.com/www.hadviser.com/wp-content/uploads/2020/01/18-chocolate-hairstyle-with-caramel-balayage-B5ZYpXiB_o_.jpg" class="d-block mx-auto w-50" alt="Image 2">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Welcome to Jao Barbershop</h1>
                 <p>We'll take care of your hair!</p>
-                <!-- Add buttons here -->
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Service</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Calendar</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Payment</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Where to find us</button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://i.pinimg.com/originals/a2/b8/12/a2b812f4240364fa31a014b1ad292dee.jpg" class="d-block mx-auto w-50" style="max-height: 700px;" alt="Image 3">
+            <img src="https://i.pinimg.com/originals/a2/b8/12/a2b812f4240364fa31a014b1ad292dee.jpg" class="d-block mx-auto w-50" alt="Image 3">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Welcome to Jao Barbershop</h1>
                 <p>We'll take care of your hair!</p>
-                <!-- Add buttons here -->
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Service</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Calendar</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Payment</button>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-primary">Where to find us</button>
-                    </div>
-                </div>
             </div>
         </div>
         <!-- Add more carousel items as needed -->
@@ -102,6 +56,7 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
 
 <div class="container-fluid bg-info py-4">
     <h3 class="text-center text-white mb-2">Book An Appointment Today!</h3>
@@ -126,7 +81,6 @@
 
 <div class="container">
     <h2>Service description</h2>
-    <p>Here is a list of services offered</p>            
     <div class="row">
         <div class="col-md-4">
             <h4>Haircut</h4>
@@ -156,6 +110,55 @@
         </div>
     </div>
 
+<div class="container">
+    <h2>Book Your Appointment</h2>
+    <form id="appointmentForm">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="time">Time:</label>
+                <select class="form-control" id="time" name="time" required>
+                    <option value="">Select Time</option>
+                    <option value="09:00">9:00 AM</option>
+                    <option value="09:30">9:30 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="10:30">10:30 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="11:30">11:30 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="13:30">1:30 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="14:30">2:30 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="15:30">3:30 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="16:30">4:30 PM</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+</div>
+
+
+
     <!--You'll certainly need buttons at some point in your site -->
     <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
     <!-- This idea is already part of the components in Bootstrap -->
@@ -171,46 +174,96 @@
     <!-- Modals are useful for additional information or questions -->
     <!-- Here the modal is used for a little survey -->
     <div class="container">
-        <h2>Modal Example</h2>
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
-          
-        <!-- Modal -->
-<div class="modal fade" id="mySurvey" role="dialog">
-    <div class="modal-dialog">  
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <h2>How did you hear about us?</h2>
-                    <p>Tell us:</p>
-                    <form>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Word of Mouth</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Online Search</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Social Media</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Walk-in</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" value="">Other:</label>
-                            <input type="text" class="form-control" id="otherOption" placeholder="Please specify">
-                        </div>
-                    </form>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center">Quick Questionnaire</h2>
+                <h6 class="text-center">First Visit? Answer this survey for 10% off your next visit!</h6>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info d-block mx-auto" data-toggle="modal" data-target="#mySurvey">Open</button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="mySurvey" role="dialog">
+                    <div class="modal-dialog">  
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <h2>How did you hear about us?</h2>
+                                    <p>Tell us:</p>
+                                    <form id="surveyForm">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Word of Mouth</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Online Search</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Social Media</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Walk-in</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Other:</label>
+                                            <input type="text" class="form-control" id="otherOption" placeholder="Please specify">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" form="surveyForm" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>     
+                    </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+    <!-- Add more space before the "Find Us" container -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Find Us</h2>
+    <div class="row">
+        <!-- Address Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Address</h5>
+                    <p class="card-text">37 King Edward Avenue<br> K1N 7M3, Ottawa, Canada</p>
+                </div>
             </div>
-        </div>     
+        </div>
+        <!-- Store Hours Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Store Hours</h5>
+                    <p class="card-text">Monday-Friday: 9:00 AM - 6:00 PM<br>Saturday-Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Information Card -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Information</h5>
+                    <p class="card-text">Phone: 613-456-3737<br>Email: info@jaobarbershop.com</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<div style="height: 30px;"></div>
+
+<div style="height: 100px;"></div>
+<footer class="footer bg-dark text-white py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                Website developed and maintained by group 37
+            </div>
+        </div>
+    </div>
+</footer>

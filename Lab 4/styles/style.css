@@ -1,8 +1,14 @@
-/* Style sheet */
+/* Add CSS code here */
+body {
+  margin: 0; /* Remove default body margin */
+  border: 20px solid gray; /* Add a 20px grey border around the entire page */
+  background-color: lightblue; /* Set the background color to light blue */
+}
+
 /* Define custom styles for headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Times New Roman", Times, serif;
-
+  color: black; /* Set heading text color to black */
 }
 
 /* Customize the size of the carousel images */
@@ -23,15 +29,32 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-caption,
 .carousel-caption h5,
 .carousel-caption p {
-  color: #fff; /* Text color */
+  color: lightblue; /* Text color */
 }
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: black; /* Set the background color of the caption to black */
 }
 
 #carouselContent {
   /* Position the content over the carousel */
   z-index: 1000; /* Make sure it's above the carousel */
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+.container-fluid.bg-info {
+  background-color: gray; /* Set background color for the appointment section to gray */
+}
+
+.footer.bg-dark {
+  background-color: black; /* Set background color for the footer to black */
+}
+
+.footer.bg-dark.text-white {
+  color: lightblue; /* Set text color for the footer to light blue */
+}
+
+/* Adjust text color for Jao Barbershop */
+#imageCarousel .carousel-caption h1 {
+  color: lightblue;
 }
