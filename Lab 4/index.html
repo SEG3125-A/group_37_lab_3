@@ -76,27 +76,48 @@
         </div>
     </div>
 </div>
-
-
-
 <div class="container">
     <h2>Service description</h2>
     <div class="row">
         <div class="col-md-4">
             <h4>Haircut</h4>
-            <p>Our skilled barbers provide precision haircuts tailored to your desired style and preference. Whether you're looking for a classic cut or a trendy new look, we've got you covered.</p>
+            <p>Our skilled barbers provide precision haircuts tailored to your desired style and preference. Whether you're looking for a classic cut, a trendy new look, or experimenting with the latest hair trends, we've got you covered.</p>            <div id="haircutDetails" style="display: none;">
+                <p><strong>Service Provider:</strong> John Doe</p>
+                <p><strong>Price:</strong> $30</p>
+            </div>
+            <a href="#" class="more-info-link" data-target="#haircutDetails">More Info</a>
+            <button class="btn btn-primary book-btn">Book</button>
         </div>
         <div class="col-md-4">
             <h4>Beard Trim</h4>
             <p>Elevate your grooming routine with our professional beard trimming service. From shaping to detailing, our barbers will sculpt your beard to perfection, enhancing your overall appearance.</p>
+            <div id="beardTrimDetails" style="display: none;">
+                <p><strong>Service Provider:</strong> Jane Smith</p>
+                <p><strong>Price:</strong> $20</p>
+            </div>
+            <a href="#" class="more-info-link" data-target="#beardTrimDetails">More Info</a>
+            <button class="btn btn-primary book-btn">Book</button>
         </div>
         <div class="col-md-4">
             <h4>Shave</h4>
             <p>Experience the ultimate shaving experience with our traditional hot towel shave. Sit back, relax, and let our skilled barbers provide you with a smooth and refreshing shave using high-quality products and techniques.</p>
+            <div id="shaveDetails" style="display: none;">
+                <p><strong>Service Provider:</strong> Michael Johnson</p>
+                <p><strong>Price:</strong> $25</p>
+            </div>
+            <a href="#" class="more-info-link" data-target="#shaveDetails">More Info</a>
+            <button class="btn btn-primary book-btn">Book</button>
         </div>
     </div>
 </div>
-
+<script>
+    $(document).ready(function(){
+        $(".more-info-link").click(function(event){
+            event.preventDefault(); // Prevent the default behavior of the link
+            $($(this).data("target")).toggle();
+        });
+    });
+</script>
 
 
 
@@ -158,18 +179,6 @@
 </div>
 
 
-
-    <!--You'll certainly need buttons at some point in your site -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
-    <!-- <div class="container">
-        <h2>Button States</h2>
-        <button type="button" class="btn btn-warning">Primary Button</button>
-        <button type="button" class="btn btn-warning active">Active Primary</button>
-        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
-    </div>
-    -->
-
     <!-- Including a modal -->
     <!-- Modals are useful for additional information or questions -->
     <!-- Here the modal is used for a little survey -->
@@ -225,7 +234,7 @@
     </div>
     <!-- Add more space before the "Find Us" container -->
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Find Us</h2>
+    <h2 class="text-center mb-4">Contact Us</h2>
     <div class="row">
         <!-- Address Card -->
         <div class="col-md-4">
