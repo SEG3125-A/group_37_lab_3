@@ -1,0 +1,164 @@
+.logo {
+  display: block;
+  max-width: 110px;
+  height: auto;
+}
+
+.icon {
+  max-width: 30px; 
+  height: auto; 
+}
+
+
+
+.payment-info-header {
+  display: flex;
+  align-items: center; 
+}
+
+.navbar {
+  background-color: #ADD8E6 !important; 
+  border: 2px solid white;
+}
+
+body {
+  margin: 0;
+  background-color: #ADD8E6; 
+}
+
+
+.carousel-inner {
+  max-height: 500px; 
+}
+
+.carousel-item img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center; 
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 80px; 
+  margin: -80px 0 0; 
+}
+
+
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); 
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  text-align: center; 
+}
+
+.carousel-caption h5, .carousel-caption p {
+  color: #add8e6; 
+}
+
+
+.container-fluid.bg-info {
+  background-color: #808080; 
+}
+
+.footer.bg-dark {
+  background-color: #000; 
+}
+
+.footer.bg-dark.text-white {
+  color: #ADD8E6; 
+}
+
+#carouselContent {
+  position: relative; 
+  background-color: transparent; 
+}
+
+
+
+
+.more-info-link {
+  display: block; 
+  margin-top: 10px;
+}
+
+.d-flex.align-items-start {
+  align-items: center;
+}
+ 
+.contact-header, .card-body {
+  display: flex;
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+}
+
+.service-item {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 15px; 
+}
+
+.service-icon {
+  flex-shrink: 0; 
+  width: 48px; 
+  height: 48px; 
+  margin-right: 10px; 
+}
+
+.service-text {
+  flex-grow: 1; 
+}
+
+#haircutDetails {
+  display: flex;
+  align-items: center;
+}
+
+.miniicon {
+  margin-right: 10px; 
+  width: 48px; 
+  height: 48px; 
+}
+.exeperticon {
+  max-width: auto; 
+  height: auto; 
+}
+
+.experticon {
+  margin-top: 10px; 
+  width: 48px;
+  height: 48px; 
+
+}
+
+.service-item {
+  display: flex;
+  align-items: start; 
+}
+
+.service-icon {
+  width: 60px; 
+  height: auto;
+}
+
+.service-text {
+  flex-grow: 1; 
+}
+
+.provider-info {
+  display: flex;
+  align-items: center; 
+}
+
+.provider-icon {
+  margin-bottom: 12px;
+  width: 70px; 
+  height: auto;
+}
+
