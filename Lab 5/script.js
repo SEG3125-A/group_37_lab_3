@@ -11,13 +11,6 @@ $(document).ready(function() {
         });
     }, 2000); // Start automatic rotation after 2 seconds delay
 
-    // Toggle additional details when "more info" link is clicked and hide the button
-    $(".more-info-link").click(function(event) {
-        event.preventDefault(); // Prevent the default behavior of the link
-        var targetId = $(this).data("target");
-        $(targetId).toggle(); // Toggle visibility of the target element
-        $(this).hide(); // Hide the "More Info" button after clicking
-    });
 
     // Update service price based on selected professional
     $('#professional').change(function() {
