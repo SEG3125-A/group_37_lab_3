@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess.com Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Chess.com UI Analysis Survey</h1>
+        <a href="https://www.chess.com/" rel="noopener noreferrer">
+            <img src="/images/Chess.jpg" alt="Chess.com Homepage">
+        </a>
+        <div class="caption center-block">Click the picture above to view Chess.com's website</div>
+        <form class="needs-validation" novalidate id="form" action="/chessSurvey" method="POST">
+            <div class="form-group">
+                <label for="initial-impression" class="form-label">What is your initial impression of Chess.com?</label>
+                <input type="text" placeholder="Enter initial impression..." name="initial-impression" class="form-control" required>
+                <div class="invalid-feedback">Please enter an initial impression.</div>
+            </div>
+            <div class="form-group">
+                <label for="liked-features" class="form-label">Which features/sections do you like? (Select all that apply)</label>
+                <div class="form-check">
+                    <input type="checkbox" name="liked-features" value="Ease of Use" class="form-check-input" id="easeOfUse">
+                    <label class="form-check-label" for="easeOfUse">Ease of Use</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="liked-features" value="Interface Design" class="form-check-input" id="interfaceDesign">
+                    <label class="form-check-label" for="interfaceDesign">Interface Design</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="liked-features" value="Daily Puzzles" class="form-check-input" id="dailyPuzzles">
+                    <label class="form-check-label" for="dailyPuzzles">Daily Puzzles</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" name="liked-features" value="Featured Live Streams" class="form-check-input" id="featuredLive">
+                    <label class="form-check-label" for="featuredLive">Featured live streams</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">How do you find the color scheme?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color-scheme" value="Poor" id="Poor">
+                    <label class="form-check-label" for="Poor">Poor</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color-scheme" value="Satisfactory" id="Satisfactory">
+                    <label class="form-check-label" for="Satisfactory">Satisfactory</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color-scheme" value="Great" id="Great">
+                    <label class="form-check-label" for="Great">Great</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color-scheme" value="Excellent" id="Excellent">
+                    <label class="form-check-label" for="Excellent">Excellent</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="easy-to-navigate" class="form-label">Is the website easy to navigate?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="easy-to-navigate" value="Yes" id="Yes">
+                    <label class="form-check-label" for="Yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="easy-to-navigate" value="No" id="No">
+                    <label class="form-check-label" for="No">No</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="easy-to-navigate" value="Somewhat" id="Somewhat">
+                    <label class="form-check-label" for="Somewhat">Somewhat</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rate-interface" class="form-label">What would you rate the Interface? (1-10, where 10 is the highest)</label>
+                <div class="d-flex flex-wrap">
+                    <!-- Generate radio buttons for ratings 1-10 -->
+                    <!-- Simplified for brevity; ensure to include options 1 through 10 -->
+                    <div class="d-flex flex-wrap">
+                      <!-- Generate radio buttons for ratings 1-10 -->
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating1" value="1">
+                        <label class="form-check-label" for="rating1">1</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating2" value="2">
+                        <label class="form-check-label" for="rating2">2</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating3" value="3">
+                        <label class="form-check-label" for="rating3">3</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating4" value="4">
+                        <label class="form-check-label" for="rating4">4</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating5" value="5">
+                        <label class="form-check-label" for="rating5">5</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating6" value="6">
+                        <label class="form-check-label" for="rating6">6</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating7" value="7">
+                        <label class="form-check-label" for="rating7">7</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating8" value="8">
+                        <label class="form-check-label" for="rating8">8</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating9" value="9">
+                        <label class="form-check-label" for="rating9">9</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rate-interface" id="rating10" value="10">
+                        <label class="form-check-label" for="rating10">10</label>
+                      </div>
+                    </div>
+                  </div>
+                  
+            <div class="form-group">
+                <label for="additional-feedback" class="form-label">Please add any additional comments:</label>
+                <textarea class="form-control" rows="3" name="additional-feedback" placeholder="Enter comments..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-success mx-auto d-block" id="submitBtn">Submit</button>
+        </form>
+        <div id="confirmation" class="alert alert-success w-100" hidden role="alert"></div>
+        <footer>Website Designed by: Group 37</footer>
+    </div>
+    <script src="/assets/action.js"></script>
+</body>
+</html>
