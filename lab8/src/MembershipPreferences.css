@@ -1,0 +1,26 @@
+/* MembershipPreferences.css */
+
+
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 5px; /* Adjust margin for better spacing */
+}
+
+label {
+  display: inline-flex; /* Change to inline-flex */
+  align-items: center; /* Align items vertically */
+  margin: 10px 0;
+}
+
+button {
+  margin: 10px 5px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
