@@ -7,32 +7,27 @@
 }
 
 .sign-up {
-  background-color: #0077b6; 
+  background-color: #0077b6;
   color: white;
   padding: 12px 24px;
   margin: 10px 10px 10px 0;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  text-decoration: none; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
 }
 
 .sign-up:hover {
   opacity: 0.9;
-  transform: translateY(-2px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
-
-.sign-up {
-  background-color: #0077b6; 
-}
-
 
 .app-header {
   width: 100%;
-  background-color: #118ab2;
+  background-color: #073b4c;
   color: white;
   padding: 20px;
   text-align: center;
@@ -51,10 +46,29 @@
 
 .bottom-section {
   display: flex;
-  width: 100%;
+  flex-direction: column;
 }
 
-.event, .resources {
+.resources-feedback-container {
+  display: flex;
+}
+
+.resources {
+  border: 2px solid #073b4c;
+  margin: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.feedback-container {
+  border: 2px solid #073b4c;
+  margin: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.event,
+.resources {
   border: 2px solid #073b4c;
   margin: 10px;
   padding: 10px;
@@ -72,20 +86,19 @@
 
 .app-header {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
-  position: relative; 
+  position: relative;
   padding: 20px;
   text-align: center;
 }
 
-
-
 .auth-buttons {
   position: absolute;
-  right: 40px; 
+  right: 40px;
   display: flex;
 }
+
 .member {
   margin-bottom: 20px;
 }
@@ -106,8 +119,34 @@ button {
   cursor: pointer;
 }
 
+.members-resources-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.members-container,
+.resources {
+  border: 2px solid #073b4c;
+  margin: 10px;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.feedback-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-container textarea {
+  margin-bottom: 10px;
+}
+
+.feedback-container button {
+  align-self: flex-start;
+}
+
 .more-info {
-  background-color: #073b4c; 
+  background-color: #073b4c;
 }
 
 button:hover {
@@ -115,14 +154,28 @@ button:hover {
 }
 
 .sign-up {
-  background-color: #4243437e; 
+  background-color: #4243437e;
+}
+
+.footer {
+  background-color: #073b4c;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.feedback-title {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-  .top-section, .bottom-section {
+  .top-section,
+  .bottom-section {
     flex-direction: column;
   }
-  
+
   .members-container {
     flex-direction: column;
   }

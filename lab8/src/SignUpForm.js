@@ -5,19 +5,18 @@ import PersonalInfo from './PersonalInfo';
 import AdditionalInfo from './AdditionalInfo'; 
 import MembershipPreferences from './MembershipPreferences'; 
 
-
 function SignUpForm() {
-    const [currentStep, setCurrentStep] = useState(1);
-    const [formData, setFormData] = useState({
-      fullName: '',
-      email: '',
-      password: '',
-      address: '',
-      city: '',
-      state: '',
-      postalCode: '',
-      newsletter: false, 
-    });
+  const [currentStep, setCurrentStep] = useState(1);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    password: '',
+    address: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    newsletter: false, 
+  });
 
   const navigate = useNavigate();
 
@@ -35,7 +34,6 @@ function SignUpForm() {
     navigate('/'); 
   };
   
-
   const nextStep = () => {
     setCurrentStep(currentStep + 1);
   };

@@ -1,53 +1,86 @@
 import React, { useState } from 'react';
+import translations from './Translations.json';
 import './app.css';
-import './PersonalInfo.js'
 
+function HomePage({ onLanguageChange }) {
+  const [language, setLanguage] = useState('en'); // Default language is English
 
+  const toggleLanguage = () => {
+    const newLanguage = language === 'en' ? 'fr' : 'en';
+    setLanguage(newLanguage); // Toggle between English and French
+    onLanguageChange(newLanguage); // Propagate language change to parent component
+  };
 
+  const handleSubmitFeedback = (feedback) => {
+    // Handle feedback submission
+    console.log('Feedback:', feedback);
+    alert('Feedback submitted successfully!');
+  };
 
-function HomePage() {
   return (
     <div className="content">
+      <div className="header">
+        <button className="language-switch" onClick={toggleLanguage}>
+          {translations[language].toggleLanguage}
+        </button>
+      </div>
       <div className="top-section">
         <div className="event left">
-          <h2>First Ever Mount Everest Ski</h2>
-          <p>Date: March 1, 2024</p>
-          <p>Description: Join us for the world's first ever Mount Everest ski trip. Enjoy breathtaking views and slopes!</p>
-          <button>Register</button>
-          <button className="more-info">More Info</button>
+          <h2>{translations[language].firstEverSki}</h2>
+          <p>{translations[language].firstEverDate}</p>
+          <p>{translations[language].firstEverDescription}</p>
+          <button>{translations[language].register}</button>
+          <button className="more-info">{translations[language].moreInfo}</button>
         </div>
         <div className="event right">
-          <h2>Ski Workshop: Advanced Techniques</h2>
-          <p>Date: April 1, 2024</p>
-          <p>Description: Improve your skiing skills with our advanced workshop. Everyone welcome!</p>
-          <button>Register</button>
-          <button className="more-info">More Info</button>
+          <h2>{translations[language].workshopSki}</h2>
+          <p>{translations[language].workshopDate}</p>
+          <p>{translations[language].workshopDescription}</p>
+          <button>{translations[language].register}</button>
+          <button className="more-info">{translations[language].moreInfo}</button>
         </div>
       </div>
       <div className="bottom-section">
-        <div className="resources">
-          <h2>Resources</h2>
-          <p>Ski Guides</p>
-          <p>Ski Equipment Checklist</p>
-          <a href="/guides">View all resources</a>
-        </div>
         <div className="members-container">
-          <h2>Famous Member Profiles</h2>
+          <h2>{translations[language].famousMembers}</h2>
           <div className="member">
-            <h3>Omar Abdul</h3>
-            <p>World Rank: 4</p>
-            <p>Favorite Slope: Aspen</p>
-            <button>View Profile</button>
+            <h3>{translations[language].omarAbdul}</h3>
+            <p>{translations[language].omarRank}</p>
+            <p>{translations[language].omarSlope}</p>
+            <button>{translations[language].viewProfile}</button> {/* Translate button */}
           </div>
           <div className="separator"></div>
           <div className="member">
-            <h3>Joshua Anton</h3>
-            <p>World Rank: 2</p>
-            <p>Favorite Slope: Chamonix</p>
-            <button>View Profile</button>
+            <h3>{translations[language].joshuaAnton}</h3>
+            <p>{translations[language].joshuaRank}</p>
+            <p>{translations[language].joshuaSlope}</p>
+            <button>{translations[language].viewProfile}</button> {/* Translate button */}
+          </div>
+        </div>
+        <div className="resources-feedback-container">
+          <div className="resources">
+            <h2>{translations[language].resources}</h2>
+            <p>{translations[language].skiGuides}</p>
+            <p>{translations[language].equipmentChecklist}</p>
+            <a href="https://campfortune.com/" target="_blank">{translations[language].viewAllResources}</a>
+          </div>
+          <div className="feedback-container">
+            <h2>{translations[language].shareIdeas}</h2>
+            <form onSubmit={handleSubmitFeedback}>
+              <textarea
+                placeholder={translations[language].enterFeedback}
+                rows={4}
+                cols={50}
+                required
+              />
+              <button type="submit">{translations[language].submitFeedback}</button>
+            </form>
           </div>
         </div>
       </div>
+      <footer className="footer">
+        <p>{translations[language].websiteDeveloped}</p>
+      </footer>
     </div>
   );
 }
